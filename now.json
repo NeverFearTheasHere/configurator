@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "configurator",
+  "alias": "sam-configurator",
   "builds": [
     {
       "src": "next.config.js",

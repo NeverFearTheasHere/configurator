@@ -1,10 +1,18 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import { allManufacturers } from '../models/rope';
+import Select from './Select';
 
-type Props = {};
+const manufacturerSuggestions = allManufacturers.map(manufacturer => ({
+  value: manufacturer,
+  label: manufacturer,
+}));
 
-const ManufacturerSelect: React.SFC<Props> = () => (
-  <Typography>Manufacturer multi-select will go here</Typography>
+const ManufacturerSelect = () => (
+  <Select
+    isMulti
+    suggestions={manufacturerSuggestions}
+    placeholder="Select one or more manufacturers"
+  />
 );
 
 export default ManufacturerSelect;
